@@ -1,0 +1,8 @@
+FROM node:alpine
+
+# Add node-bacstack
+Add . .
+RUN npm install
+
+# Run stuff
+CMD npm run compliance

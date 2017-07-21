@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bacnet-device:
+    build:
+      context: .
+      dockerfile: Dockerfile.device
+  bacnet-client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    links:
+    - bacnet-device
